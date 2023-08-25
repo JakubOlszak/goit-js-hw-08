@@ -20,15 +20,14 @@ const createGalleryItem = (hrefImg, srclImg, descr) => {
 </li>`;
 };
 
-const render = () => {
+ 
   const images = galleryItems.map(({ original, preview, description }) =>
     createGalleryItem(original, preview, description)
   );
   gallery.insertAdjacentHTML('beforeend', images.join(''));
-};
-render();
+ 
 
 const gallerySimpleLightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
-  captionDelay: '250',
+  captionDelay: 250,
 });
